@@ -45,3 +45,9 @@ body {
     text-align: right;
     margin-right: 18px;
 }
+
+/*画像*/
+.mainimage{
+    width: 100%;
+    height: auto;
+}
