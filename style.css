@@ -1,0 +1,41 @@
+body {
+    background-color: #08024D;
+    font-family: Kaisei Decol; /*メインの日本語フォント*/
+}
+/*トップスペース*/
+.space1{
+    background-color: #ffffff;
+    height: 63px;
+    width: 100%;
+}
+
+/*フォント*/
+.ep{
+    font-family: Caveat;
+}
+.np{
+    font-family: Montserrat;
+}
+
+/*大きさ*/
+.h1{
+    font-size: 26px;
+}
+.h2{
+    font-size: 24px;
+}
+.p{
+    font-family: 16px;
+}
+.thanks{
+    font-size: 32px;
+}
+
+/*場所*/
+.title{
+    margin-left: 7px;
+    margin-top: 3px;
+}
+.date{
+    margin-left: 7px;
+}
