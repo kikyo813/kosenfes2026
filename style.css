@@ -40,6 +40,7 @@ body {
 }
 .date{
     margin-left: 7px;
+    margin-top: -20px;
 }
 .thanks{
     text-align: right;
@@ -50,4 +51,5 @@ body {
 .mainimage{
     width: 100%;
     height: auto;
+    margin-top: -20px;
 }
