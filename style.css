@@ -34,51 +34,59 @@ body {
 
 /*大きさ*/
 h1{
-    font-size: 80px;
-    font-weight: 300
+    font-size: 5.556vw; /*80px*/
+    font-weight: 1
 }
 h2{
-    font-size: 30px;
+    font-size: 2.083vw; /*30px*/
     font-weight: 400
 }
 h3{
-    font-size: 60px;
+    font-size: 4.167vw; /*60px*/
     font-weight: 300
     /*ギャラリーとか*/
 }
 p{
-    font-family: 22px;
+    font-family: 1.528vw; /*22px*/
 }
 .thanks{
-    font-size: 80px;
+    font-size: 5.556vw;
 }
 
 /*場所*/
 .title{
-    margin-left: 188px;
-    margin-top: 0px; /*スマホは24pxだった*/
+    /*margin-left: 188px;*/
+    margin: 0 auto;
+    margin-top: 0; /*スマホは24pxだった*/
     margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+    /*right: -13.06%*/
 }
 .date{
-    margin-left: 188px;/**/
-    margin-top: 0;
-    margin-top: -13px; /*元は-20だったなんでやろ....いつか参考にすることがあるかも？*/
+    margin: 0 auto;
+    margin-left: 18.06%;
+    margin-top: 0%;
+    margin-top: -1.5%; /*元は-20だったなんでやろ....いつか参考にすることがあるかも？*/
     position: relative;
     z-index: 1;
 }
 .thanks{
-    text-align: right;
-    margin-right: 18px;
+    width: 65.28%; /* 1440pxのとき約940px */
+    margin: 0 auto;
+    padding: 2.57% 0%;
+    text-indent: 29%;; /*右端から20px内側  new! 今回から文字だけ動かすのはtext indet使う*/
 }
 .mainimage{
-    margin-left: 188px;
+    margin: 0 auto;
+    /*margin-left: 13.06%;*/
 }
 
 /*画像*/
 .mainimage{
-    width: 888px;
+    width: 63.89%;
     height: auto;
-    margin-top: -125px;
+    margin-top: -8.68%;
     display: block;
     max-width: none;
     position: relative;
@@ -89,12 +97,22 @@ p{
 .title{
     background-color: #08024D;
     /*display: inline-block;これしたら文字の部分だけの背景になる*/
-    width: 888px;
-    padding: 20px 26px; /*文字と背景の左右に隙間をつくる　　その分、上は1040のところ1000に削ってる*/
+    width: 63.89%;
+    padding-left: 1.39% ; /*文字と背景の左右に隙間をつくる　　その分、上は1040のところ1000に削ってる*/
 }
 
 .date{
     background-color: #08024D;
-    width: 278px;
-    padding: 37px 5px;
+    width: 18%;
+    padding: 2.57% 0.35%;
+        clip-path: polygon(
+        0 0, 100% 0,
+        90% 100%, 0 100%
+    );
+}
+
+.thanks{
+    background-color: #08024D;
+    width: 63.89%;
+    padding: 2.57% 0%;
 }
