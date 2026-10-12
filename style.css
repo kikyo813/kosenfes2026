@@ -14,7 +14,10 @@ body {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
+
+    overflow-wrap: break-word;
 }
 
 /*トップスペース*/
@@ -34,20 +37,21 @@ body {
 
 /*大きさ*/
 h1{
-    font-size: 5.556vw; /*80px*/
-    font-weight: 1
+    font-size: clamp(32px, 5.556vw, 80px); /*80px*/
+    font-weight: 1;
 }
 h2{
-    font-size: 2.083vw; /*30px*/
-    font-weight: 400
+    font-size: 2.1vw; /*30px=2.083vw だが、もう少し大きくする*/
+    font-weight: 200;
 }
 h3{
     font-size: 4.167vw; /*60px*/
-    font-weight: 300
+    font-weight: 300;
+    color ;
     /*ギャラリーとか*/
 }
 p{
-    font-family: 1.528vw; /*22px*/
+    font-size: 1.528vw; /*22px*/
 }
 .thanks{
     font-size: 5.556vw;
@@ -55,36 +59,45 @@ p{
 
 /*場所*/
 .title{
-    /*margin-left: 188px;*/
     margin: 0 auto;
+    /*margin-left: 188px;*/
     margin-top: 0; /*スマホは24pxだった*/
     margin-bottom: 0;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     /*right: -13.06%*/
 }
 .date{
     margin: 0 auto;
-    margin-left: 18.06%;
+    margin-left: 18%;
     margin-top: 0%;
     margin-top: -1.5%; /*元は-20だったなんでやろ....いつか参考にすることがあるかも？*/
     position: relative;
     z-index: 1;
 }
 .thanks{
-    width: 65.28%; /* 1440pxのとき約940px */
     margin: 0 auto;
+    margin-top: -0.3%;
+    width: 65.28%; /* 1440pxのとき約940px */
     padding: 2.57% 0%;
-    text-indent: 29%;; /*右端から20px内側  new! 今回から文字だけ動かすのはtext indet使う*/
+    text-indent: 30%;; /*右端から20px内側  new! 今回から文字だけ動かすのはtext indet使う*/
 }
 .mainimage{
     margin: 0 auto;
-    /*margin-left: 13.06%;*/
+/*margin-left: 13.06%;*/
+}
+.space2{
+    margin: 0 auto;
+    margin-right: ;
+    margin-top: -6.3%;
+    margin-right: 18%;
+    position: relative;
+    z-index: 1;
 }
 
 /*画像*/
 .mainimage{
-    width: 63.89%;
+    width: 63.8%;
     height: auto;
     margin-top: -8.68%;
     display: block;
@@ -97,22 +110,29 @@ p{
 .title{
     background-color: #08024D;
     /*display: inline-block;これしたら文字の部分だけの背景になる*/
-    width: 63.89%;
+    width: 63.88%;
     padding-left: 1.39% ; /*文字と背景の左右に隙間をつくる　　その分、上は1040のところ1000に削ってる*/
 }
-
 .date{
     background-color: #08024D;
-    width: 18%;
+    width: 18.5%;
     padding: 2.57% 0.35%;
-        clip-path: polygon(
+    clip-path: polygon(
         0 0, 100% 0,
         90% 100%, 0 100%
     );
 }
-
 .thanks{
     background-color: #08024D;
     width: 63.89%;
     padding: 2.57% 0%;
+}
+.space2{
+    background-color: #08024D;
+    width: 20%;
+    padding: 3.2% 0%;
+    clip-path: polygon(
+        10% 0, 100% 0,
+        100% 100%, 0 100%
+    );
 }
