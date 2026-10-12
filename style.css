@@ -1,25 +1,22 @@
 body {
-    margin: 0;
-    background-color: #ffffff;      /*元#08024D*/
+    /*margin: 0;*/
+    background-color: #000000;      /*元#08024D*/
     font-family: Kaisei Decol; /*メインの日本語フォント*/
     color: white;
-
     -webkit-font-smoothing: antialiased; /*この2文でフォントがすっきりするらしい*/
     -moz-osx-font-smoothing: grayscale;
-}
 
-main{
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
 }
 
 /*トップスペース*/
-.space1{
+/*.space1{
     background-color: #ffffff;
     height: 63px;
     width: 100%;
-}
+}*/
 
 /*フォント*/
 .ep{
@@ -35,8 +32,13 @@ h1{
     font-weight: 300
 }
 h2{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400
+}
+h3{
+    font-size: 60px;
+    font-weight: 300
+    /*ギャラリーとか*/
 }
 p{
     font-family: 22px;
@@ -49,10 +51,12 @@ p{
 .title{
     margin-left: 188px;
     margin-top: 0px; /*スマホは24pxだった*/
+    margin-bottom: 0;
 }
 .date{
-    margin-left: 37px;
-    margin-top: -20px;
+    margin-left: 188px;/**/
+    margin-top: 0;
+    margin-top: -30px; /*元は-20だったなんでやろ....いつか参考にすることがあるかも？*/
 }
 .thanks{
     text-align: right;
@@ -70,6 +74,12 @@ p{
 .title{
     background-color: #08024D;
     /*display: inline-block;これしたら文字の部分だけの背景になる*/
-    width: 988px;
+    width: 888px;
     padding: 0px 26px; /*文字と背景の左右に隙間をつくる　　その分、上は1040のところ1000に削ってる*/
+}
+
+.date{
+    background-color: #08024D;
+    width: 278px;
+    padding: 37px 5px;
 }
