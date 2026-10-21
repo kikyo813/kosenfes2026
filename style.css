@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+
 body {
     /*margin: 0;*/
     background-color: #000000;      /*元#08024D*/
@@ -9,6 +14,15 @@ body {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    z-index: 1;
+}
+
+.outer {
+    display: flex;
+    flex-direction: column;   /* 要素を縦に並べる構造にする */
+    align-items: center;      /* これで中身が自動的に「左右中央寄せ」になります */
+    justify-content: flex-start;
+    min-height: 100vh;        /* 画面の高さに固定せず、下へ伸びるようにする */
 }
 
 /*トップスペース*/
@@ -29,57 +43,96 @@ body {
 /*大きさ*/
 h1{
     font-size: 80px;
-    font-weight: 300
+    font-weight: 300;
+    position: relative;
+    z-index: 2;
 }
 h2{
     font-size: 30px;
     font-weight: 400
 }
-h3{
+.subtitle{
+    text-align: center;
     font-size: 60px;
     font-weight: 300
     /*ギャラリーとか*/
 }
-p{
+.main_text{
+    text-align: center;
     font-family: 22px;
+    font-weight: 300
+    
 }
 .thanks{
     font-size: 80px;
 }
-
+.work_sheet_text{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300
+}
 /*場所*/
 .title{
-    margin-left: 188px;
+    margin-left: 10px;
     margin-top: 0px; /*スマホは24pxだった*/
     margin-bottom: 0;
 }
 .date{
-    margin-left: 188px;/**/
-    margin-top: 0;
-    margin-top: -30px; /*元は-20だったなんでやろ....いつか参考にすることがあるかも？*/
+    margin-left: 40px;/**/
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
 }
 .thanks{
     text-align: right;
     margin-right: 18px;
+    position: relative;
+    z-index: 2;
 }
 
+
 /*画像*/
-.mainimage{
-    width: 100%;
-    height: auto;
-    margin-top: -20px;
+.mainimage {
+    width: 940px;       /* 横幅を940pxに縮小する */
+    aspect-ratio: 16 / 9;     /* 【最重要】比率を完璧に16:9の横長に固定する */
+    height: auto;       /* 【最重要】高さを元の画像の比率に合わせて自動計算する */
+    display: block;
+    margin: -160px auto;     /* 左右中央寄せ */
+    position: relative;
+    z-index: 0;
+    
+    /* もし残っていたら、以下の2行は必ず【削除】してください */
+    /* object-fit: cover;  ←削除（これがあると画像が切れます） */
+    /* aspect-ratio: ...;   ←削除（これがあると比率が変わります） */
 }
 
 /*背景*/
-.title{
-    background-color: #08024D;
-    /*display: inline-block;これしたら文字の部分だけの背景になる*/
-    width: 888px;
-    padding: 0px 26px; /*文字と背景の左右に隙間をつくる　　その分、上は1040のところ1000に削ってる*/
-}
 
-.date{
+
+.main_box{
     background-color: #08024D;
-    width: 278px;
-    padding: 37px 5px;
+    width: 940px;
+    height: auto;
+}
+/*title_ber*/
+.top_title_ber{
+    width: 940px;
+    height: 200px;
+    background-color: #08024D;
+    margin: -1320px auto 0 auto;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 30px 40px;
+
+    /* エラーの原因になるコメントをすべて消し、数値を確実に読み込ませる設定です */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 30.5% 60%, 27.5% 100%, 0% 100%);
+    position: relative;
+    z-index: 1;
+}
+/*.under_title_ber{
+    background-color: #08024D;
+    width: 940px;
+    height: 10px;
+    margin: 0 auto;
 }
