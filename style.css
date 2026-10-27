@@ -74,12 +74,12 @@ h2{
 /*場所*/
 .title{
     margin-left: 10px;
-    margin-top: 0px; /*スマホは24pxだった*/
+    margin-top: -200px; /*スマホは24pxだった*/
     margin-bottom: 0;
 }
 .date{
-    margin-left: 40px;/**/
-    margin-top: 10px;
+    margin-left: 25px;/**/
+    margin-top: 15px;
     position: relative;
     z-index: 2;
 }
@@ -87,6 +87,8 @@ h2{
     text-align: right;
     margin-right: 18px;
     position: relative;
+    top :-200px;
+    right: 30px;
     z-index: 2;
 }
 
@@ -97,7 +99,7 @@ h2{
     aspect-ratio: 16 / 9;     /* 【最重要】比率を完璧に16:9の横長に固定する */
     height: auto;       /* 【最重要】高さを元の画像の比率に合わせて自動計算する */
     display: block;
-    margin: -160px auto;     /* 左右中央寄せ */
+    margin:  -200px auto;     /* 左右中央寄せ */
     position: relative;
     z-index: 0;
     
@@ -119,7 +121,7 @@ h2{
     width: 940px;
     height: 200px;
     background-color: #08024D;
-    margin: -1320px auto 0 auto;
+    margin:  auto 0 auto;
     position: relative;
     z-index: 1;
     box-sizing: border-box;
@@ -130,9 +132,29 @@ h2{
     position: relative;
     z-index: 1;
 }
-/*.under_title_ber{
-    background-color: #08024D;
+.under_title_ber{
     width: 940px;
-    height: 10px;
-    margin: 0 auto;
+    height: 200px;
+    background-color: #08024D;
+    margin: 120px auto 0 auto;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 30px 40px;
+
+    /* 左右反転（水平反転）させたclip-pathの設定です */
+    clip-path: polygon(100% 100%, 0% 100%, 0% 40%, 69.5% 40%, 72.5% 0%, 100% 0%);
+}
+.middle_ber1{
+    width: 940px;
+    height: 100px;
+    background-color: #DDDDDD;
+    margin: 120px auto 0 auto;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 30px 40px;
+
+    /* 左右反転（水平反転）させたclip-pathの設定です */
+    clip-path: polygon(0% 0%,0% 100%,100% 30%,65% 45%,65% 55%,100% 70%,100% 100%,0% 100%,0% 70%,35% 55%,35% 45%,0% 30%);
 }
