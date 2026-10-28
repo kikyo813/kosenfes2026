@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
 }
 
@@ -16,7 +16,6 @@ body {
     margin: 0 auto;
     z-index: 1;
 }
-
 .outer {
     display: flex;
     flex-direction: column;   /* 要素を縦に並べる構造にする */
@@ -52,6 +51,7 @@ h2{
     font-weight: 400
 }
 .subtitle{
+    color: black;
     text-align: center;
     font-size: 60px;
     font-weight: 300
@@ -59,7 +59,7 @@ h2{
 }
 .main_text{
     text-align: center;
-    font-family: 22px;
+    font-size: 22px;
     font-weight: 300
     
 }
@@ -71,6 +71,14 @@ h2{
     font-size: 30px;
     font-weight: 300
 }
+.work_sheet{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 300
+}
+
+
 /*場所*/
 .title{
     margin-left: 10px;
@@ -78,20 +86,55 @@ h2{
     margin-bottom: 0;
 }
 .date{
-    margin-left: 25px;/**/
-    margin-top: 15px;
+    margin-left: 10px;/**/
+    margin-top: 10px;
     position: relative;
     z-index: 2;
 }
 .thanks{
     text-align: right;
-    margin-right: 18px;
+    margin-right: 20px;
+    transform: translateY(-10px); /* この数値を大きくすると下がる */
     position: relative;
-    top :-200px;
-    right: 30px;
     z-index: 2;
 }
-
+.work_sheet{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+.footer{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: -300px;
+    position: relative;
+    z-index: 2;
+}
+.space-fix{
+    height: 0;
+    margin-top: -260px;
+    padding: 0;
+}
+.space-fix2{
+    height: 0;
+    margin-top: 40px;
+    padding: 0;
+}
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+    margin: 0 auto;
+    transform: translateX(20px);
+    margin-top: 40px;
+}
 
 /*画像*/
 .mainimage {
@@ -99,7 +142,7 @@ h2{
     aspect-ratio: 16 / 9;     /* 【最重要】比率を完璧に16:9の横長に固定する */
     height: auto;       /* 【最重要】高さを元の画像の比率に合わせて自動計算する */
     display: block;
-    margin:  -200px auto;     /* 左右中央寄せ */
+    margin: -100px auto;     /* 左右中央寄せ */
     position: relative;
     z-index: 0;
     
@@ -107,7 +150,14 @@ h2{
     /* object-fit: cover;  ←削除（これがあると画像が切れます） */
     /* aspect-ratio: ...;   ←削除（これがあると比率が変わります） */
 }
-
+/*.subimage{
+    width: 320px;
+    height: 320px;
+    clip-path: circle(50% at 50% 50%);
+    flex-shrink: 0;
+    z-index: 2;
+    border-radius: 100%;
+}*/
 /*背景*/
 
 
@@ -119,42 +169,61 @@ h2{
 /*title_ber*/
 .top_title_ber{
     width: 940px;
-    height: 200px;
+    height: 180px;
     background-color: #08024D;
-    margin:  auto 0 auto;
+    margin: auto 0 auto;
+    transform: translateY(0px);
     position: relative;
     z-index: 1;
     box-sizing: border-box;
     padding: 30px 40px;
 
     /* エラーの原因になるコメントをすべて消し、数値を確実に読み込ませる設定です */
-    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 30.5% 60%, 27.5% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 30.5% 55%, 27.5% 100%, 0% 100%);
     position: relative;
     z-index: 1;
 }
 .under_title_ber{
     width: 940px;
-    height: 200px;
+    height: 180px;
     background-color: #08024D;
-    margin: 120px auto 0 auto;
+    margin: auto 0 auto;
+    transform: translateY(-260px);
     position: relative;
     z-index: 1;
     box-sizing: border-box;
     padding: 30px 40px;
-
-    /* 左右反転（水平反転）させたclip-pathの設定です */
-    clip-path: polygon(100% 100%, 0% 100%, 0% 40%, 69.5% 40%, 72.5% 0%, 100% 0%);
+    clip-path: polygon(100% 100%,0% 100%,0% 45%,69.5% 45%,72.5% 0%,100% 0%);
+    position: relative;
+    z-index: 1;
 }
-.middle_ber1{
+/*.blue_section{
+    width: 940px;
+    max-width: 100%;
+    min-height: 800px;
+    background-color: #08024D;
+    margin: 0 auto;
+    z-index: 0;
+}*/
+.line{
     width: 940px;
     height: 100px;
+    clip-path: polygon(0%0%,0%25%,30%40%,30%60%,0%75%,0%100%,100%100%,100%75%,70%60%,70%40%,100%25%,100%0%);
     background-color: #DDDDDD;
-    margin: 120px auto 0 auto;
-    position: relative;
-    z-index: 1;
-    box-sizing: border-box;
-    padding: 30px 40px;
-
-    /* 左右反転（水平反転）させたclip-pathの設定です */
-    clip-path: polygon(0% 0%,0% 100%,100% 30%,65% 45%,65% 55%,100% 70%,100% 100%,0% 100%,0% 70%,35% 55%,35% 45%,0% 30%);
+    margin: 0 auto;
+}
+.circle{
+    width: 360px;
+    height: 360px;
+    clip-path: circle(50% at 50% 50%);
+    background-color: #D9D9D9;
+    flex-shrink: 0;
+    border-radius: 100%;
+}
+.footer_box{
+    width: 940px;
+    height: 200px;
+    background-color: #D9D9D9;
+    margin: 150px auto;
+    z-index: 0;
 }
