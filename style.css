@@ -71,6 +71,12 @@ h2{
     font-size: 30px;
     font-weight: 300
 }
+.work_sheet{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 300
+}
 
 
 /*場所*/
@@ -89,6 +95,22 @@ h2{
     text-align: right;
     margin-right: 20px;
     transform: translateY(-10px); /* この数値を大きくすると下がる */
+    position: relative;
+    z-index: 2;
+}
+.work_sheet{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+.footer{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: -300px;
     position: relative;
     z-index: 2;
 }
@@ -120,7 +142,7 @@ h2{
     aspect-ratio: 16 / 9;     /* 【最重要】比率を完璧に16:9の横長に固定する */
     height: auto;       /* 【最重要】高さを元の画像の比率に合わせて自動計算する */
     display: block;
-    margin: -70px auto;     /* 左右中央寄せ */
+    margin: -100px auto;     /* 左右中央寄せ */
     position: relative;
     z-index: 0;
     
@@ -198,3 +220,181 @@ h2{
     flex-shrink: 0;
     border-radius: 100%;
 }
+.footer_box{
+    width: 940px;
+    height: 200px;
+    background-color: #D9D9D9;
+    margin: 150px auto;
+    z-index: 0;
+}
+
+
+@media (max-width: 850px) {
+
+  /* ==========================================
+     スマホ用レイアウト調整（位置・余白）
+     ========================================== */
+    
+    /*大きさ*/
+    h1{
+    font-size: 32px;
+    font-weight: 300;
+    position: relative;
+    z-index: 2;
+    }
+    h2{
+    font-size: 25px;
+    font-weight: 400
+    }
+    .subtitle{
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300
+    /*ギャラリーとか*/
+    }
+    .main_text{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300
+    }
+    .thanks{
+    font-size: 35px;
+    }
+    .work_sheet_text{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300
+    }
+    .work_sheet{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 300
+    }
+
+
+    .title{
+    margin-left: 10px;
+    margin-top: -10px; /* コメントにあった24pxに調整 */
+    margin-bottom: 0;
+    }
+
+    .date {
+    margin-left: 10px;
+    margin-top: 10px;
+    }
+
+    .thanks {
+    text-align: right;
+    margin-right: 16px;
+    transform: translateY(-5px); /* 引き上げ量を小さく */
+    }
+
+    .work_sheet {
+    text-align: center;
+    margin-top: 20px;
+    }
+
+    .footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: -80px; /* -300pxから大幅に緩めて位置を補正 */
+    }
+
+    /* PCでのスペース調整用要素の隙間をスマホ向けに補正 */
+    .space-fix {
+    height: 0;
+    margin-top: -90px; /* -260pxから縮小 */
+    }
+
+    .space-fix2 {
+    height: 0;
+    margin-top: 20px;
+    }
+
+    /* 丸要素のコンテナ（横並びから画面に合わせた折り返しへ） */
+    .circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* 隙間を半分に */
+    width: 100%;
+    margin: 20px auto 0;
+    transform: translateX(0); /* 横ズレを解除して中央寄せ */
+    }
+
+
+    /* ==========================================
+     スマホ用画像調整
+     ========================================== */
+
+    .mainimage {
+    width: 100%; /* 940px固定から画面幅いっぱいに変更 */
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* マイナスマージンを一度リセット */
+    }
+
+
+    /* ==========================================
+     スマホ用背景・図形要素の調整
+     ========================================== */
+
+    .main_box {
+    background-color: #08024D;
+    width: 100%; /* 幅を100%に */
+    height: auto;
+    }
+
+    /* タイトルバー（上） */
+    .top_title_ber {
+    width: 100%;
+    height: 60px; /* 高さを180pxから縮小 */
+    padding: 15px 20px;
+    transform: translateY(130px);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 30.5% 55%, 27.5% 100%, 0% 100%);
+    }
+    .space-fix3{
+    height: 0;
+    margin-top: 20px;
+    }
+    /* タイトルバー（下） */
+    .under_title_ber {
+    width: 100%;
+    height: 60px; /* 高さを180pxから縮小 */
+    padding: 15px 20px;
+    transform: translateY(-140px); /* -260pxから位置ずれを補正 */
+    clip-path: polygon(100% 100%, 0% 100%, 0% 45%, 69.5% 45%, 72.5% 0%, 100% 0%);
+    }
+
+    /* 区切り線 */
+    .line {
+    width: 100%;
+    height: 60px; /* 高さを縮小 */
+    clip-path: polygon(0% 0%, 0% 25%, 30% 40%, 30% 60%, 0% 75%, 0% 100%, 100% 100%, 100% 75%, 70% 60%, 70% 40%, 100% 25%, 100% 0%);
+    }
+
+    /* 丸型の要素（画面からはみ出ないようサイズ縮小） */
+    .circle {
+    width: 150px; /* 360pxからスマホサイズ（160px程度）へ */
+    height: 150px;
+    clip-path: circle(50% at 50% 50%);
+    background-color: #D9D9D9;
+    flex-shrink: 0;
+    border-radius: 100%;
+    transform: translateX(12px);
+    }
+
+    /* フッターボックス */
+    .footer_box {
+    width: 100%;
+    height: 120px;
+    margin: 60px auto;
+    }
+
+}
+
